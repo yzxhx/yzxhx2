@@ -1,5 +1,23 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
+#include <iostream>
+using namespace std;
+#include <stack>
+#include <vector>
+#include <cstdlib>  //字符串处理
+
+#include <limits.h>
+
+
+bool isnum(char x);
+bool isfh(char x);
+int  yxj(char x);
+vector<string> hzbds(string s);
+double cv(string s);
+double js(vector<string> V);
+int zq=1;
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -64,7 +82,7 @@ void MainWindow::s_st(){                               //窗口切换
     this->show();
 }
 
-void MainWindow::btn0clicked(){
+void MainWindow::btn0clicked(){                        //按钮信号链接
     if(input=="0")
         input = '0';
         else input = input + '0';
@@ -163,9 +181,7 @@ void MainWindow::btnchuclicked(){
 
 }
 void MainWindow::btndianclicked(){
-    if(input=="0")
-        input = '.';
-        else input = input + '.';
+        input = input + '.';
         ui->inputline->setText(input);
 
 }
@@ -190,18 +206,165 @@ void MainWindow::btnCclicked(){
 }
 void MainWindow::btnzfclicked(){                    //正负号
     if(input=="0")
-        input = '1';
-        else input = input + "1";
-        ui->inputline->setText(input);
+        input = '-';
+    else {
+    QString::iterator p = input.end();             //遍历至输入端的末尾，如果最后一位是负号，则取消
+    p--;
+    if(*p == '-')input = input.left(input.length()-1);
+    else input = input + '-';
+    }
+    ui->inputline->setText(input);
 
 }
 
 void MainWindow::btnresultclicked(){                //计算
-    if(input=="0")
-        input = '1';
-        else input = input + "1";
-        ui->inputline->setText(input);
+    string inputTemp = input.toStdString();  //将QString 转化为 string
+    vector<string> expression = hzbds(inputTemp);
+    double value = js(expression);
+    if(zq) {
+      input=input+"="+QString::number(value);
+      ui->inputline->setText(input);
+    }else{
+      input="表达式错误";            //语法错误
+      ui->inputline->setText(input);
+    }
+}
+bool isnum(char x){                                 //判断是否为数字
+    if(x>='0'&&x<='9')return true;
+    else return false;
+}
+bool isfh(char x){                                    //判断是否为符号
+    if(x=='('||x==')'||x=='+'||x=='-'||x=='*'||x=='/')return true;
+    else return false;
+}
+int yxj(char x){                                       //运算符的优先级
+    int fhyxj = 0;
+    if(x=='(')fhyxj = 4;
+    if(x=='*'||x=='/')fhyxj = 3;
+    if(x=='+'||x=='-')fhyxj = 2;
+    if(x==')')fhyxj = 1;
+    return fhyxj;
+}
+double cv(string s){
+    bool flag = false;
+    for(int i = 0; i < s.length(); i++) {
+        if(i == 0 && s[i] == '-') continue;
+        else if(s[i] == '.' && !flag) {
+            if(i > 0 && isnum(s[i-1])) {
+                flag = true;
+                continue;
+            }
+            else {zq=0;return 0;}
+        }
+        else if(isnum(s[i])) continue;
+        else {zq=0;return 0;}
+    }
 
+    double result = atof(s.c_str());  //字符串改为浮点数
+    return result;
+}
+vector<string> hzbds(string s){
+  stack<char> fh;                                       //存放临时符号
+  vector<string> V;                                     //返回后缀表达式
+  int i = 0;
+  while(i<s.length()){
+      if(isnum(s[i])){
+          string str = "";
+          while(isnum(s[i])||s[i]=='.'){
+              str+=s[i];i++;
+          }
+          V.push_back(str);                              //将数字放入容器
+      }
+
+      else{
+          if(s[i]=='-'&&(i==0||isfh(s[i-1]))){
+              string str = "-";i++;
+              while(isnum(s[i])||s[i]=='.'){
+                  str+=s[i];i++;
+              }
+              V.push_back(str);                          //判断为负数的情况
+          }
+          else{
+              if(fh.empty()){
+                  fh.push(s[i]);i++;
+              }                                   //将第一个符号入栈
+              else{
+                  int begin = yxj(s[i]);
+                  if(begin==1){
+                      while(yxj(fh.top())!=4){
+                          string str = "";
+                          str += fh.top();
+                      }
+                  }
+                  else if(begin==4){
+                      fh.push(s[i]);i++;
+                  }
+                  else{
+                      while(begin<=yxj(fh.top())&&yxj(fh.top())!=4){
+                          string str = "";
+                          str += fh.top();
+                          V.push_back(str);
+                          fh.pop();
+                      }
+                      fh.push(s[i]);i++;
+
+
+                  }
+
+              }
+          }
+
+      }
+
+  }
+  while(!fh.empty()){
+      string str = "";
+      str += fh.top();
+      fh.pop();
+      V.push_back(str);
+  }
+  return V;
+}
+double js(vector<string> V){
+    stack<double> result;
+    int i =0;
+    for(;i<V.size();i++){
+        if(V[i].length()==1&&isfh(V[i][0])){
+            double a=0,b=0;
+            if(!result.empty()) {
+                a = result.top(); result.pop();
+            }else {zq=0;return 0;}
+            if(!result.empty()) {
+                b = result.top(); result.pop();
+            }else { zq=0;return 0;}
+            switch(V[i][0]) {
+                case '+':
+                    result.push(b+a);
+                    break;
+                case '-':
+                    result.push(b-a);
+                    break;
+                case '*':
+                    result.push(b*a);
+                    break;
+                case '/':
+                    result.push(b/a);
+                    break;
+                default:
+                    zq=0;return 0;
+            }
+
+        }
+        else{
+            if(zq==0)return 0;
+            else result.push(cv(V[i]));
+        }
+    }
+    if(result.empty()) {zq=0;return 0;}
+
+    double value = result.top();
+    result.pop();
+    return value;
 }
 
 MainWindow::~MainWindow()

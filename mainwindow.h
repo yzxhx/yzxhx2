@@ -5,6 +5,9 @@
 #include "programmer.h"
 #include "scientific.h"
 #include <QString>
+#include <QStack>
+#include <iterator>
+#include <iostream>
 namespace Ui {
 class MainWindow;
 }
