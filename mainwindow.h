@@ -5,6 +5,9 @@
 #include "programmer.h"
 #include "scientific.h"
 #include <QString>
+#include <QStack>
+#include <iterator>
+#include <iostream>
 namespace Ui {
 class MainWindow;
 }
@@ -44,7 +47,10 @@ public:
     void btnzfclicked();
     void btndianclicked();
     void btnCclicked();
-
+    void btnbfhclicked();
+    void btnpfclicked();
+    void btnghclicked();
+    void btntgclicked();
 private:
     Ui::MainWindow *ui;
     programmer prog;
