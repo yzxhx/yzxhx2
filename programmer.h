@@ -12,6 +12,34 @@ public:
 public:
     void sendsst();
     void sendsc();
+    void sjz();
+    void sljz();
+    void ejz();
+
+    void btn0clicked();
+    void btn1clicked();
+    void btn2clicked();
+    void btn3clicked();
+    void btn4clicked();
+    void btn5clicked();
+    void btn6clicked();
+    void btn7clicked();
+    void btn8clicked();
+    void btn9clicked();
+    void btnjiaclicked();
+    void btnjianclicked();
+    void btnchengclicked();
+    void btnchuclicked();
+    void btnresultclicked();
+    void btnzfclicked();
+    void btnCLclicked();
+    void btntgclicked();
+    void btnAclicked();
+    void btnBclicked();
+    void btnCclicked();
+    void btnDclicked();
+    void btnEclicked();
+    void btnFclicked();
 signals:
     void sstand();
     void sscin();
@@ -23,9 +51,10 @@ private:
     QPushButton *btn8;QPushButton *btn9;QPushButton *btnjia;QPushButton *btnjian;
     QPushButton *btncheng;QPushButton *btnchu;QPushButton *btnA;QPushButton *btnB;
     QPushButton *btnC;QPushButton *btnD;QPushButton *btnE;QPushButton *btnF;
-    QPushButton *btnfh;QPushButton *btnCL;QPushButton *btndian;QPushButton *btnresult;
+    QPushButton *btnfh;QPushButton *btnCL;QPushButton *btntg;QPushButton *btnresult;
     QPushButton *btnHex;QPushButton *btnDec;QPushButton *btnBin;
     QLineEdit *datahex;QLineEdit *datadec;QLineEdit *databin;QPushButton *btnhex;QPushButton *btnbin;
+    QString input = "0";
 };
 
 #endif // PROGRAMMER_H
