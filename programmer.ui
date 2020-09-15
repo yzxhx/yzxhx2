@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>programmer</class>
+ <widget class="QMainWindow" name="programmer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">#frame{background-image: url(:/new/prefix1/2d18b8844dc7091fec761ba080882831~640x640.jpg);}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QRadioButton" name="ejz">
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>二进制</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QRadioButton" name="bjz">
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>八进制</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QRadioButton" name="sjz">
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>十进制</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QRadioButton" name="sljz">
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>十六进制</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="3">
+        <widget class="QLineEdit" name="line2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/new/prefix1/15361217.jpg);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="btA">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(0, 85, 127);</string>
+         </property>
+         <property name="text">
+          <string>A</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="btB">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>52</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>69</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(0, 85, 127);</string>
+         </property>
+         <property name="text">
+          <string>B</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="btC">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(0, 85, 127);</string>
+         </property>
+         <property name="text">
+          <string>C</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="btD">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(0, 85, 127);</string>
+         </property>
+         <property name="text">
+          <string>D</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="btE">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(0, 85, 127);</string>
+         </property>
+         <property name="text">
+          <string>E</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="btchu">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(170, 170, 127);</string>
+         </property>
+         <property name="text">
+          <string>/</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="btjia">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(170, 170, 127);</string>
+         </property>
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QPushButton" name="bt7">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="bt4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QPushButton" name="bt1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QPushButton" name="btF">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(0, 85, 127);</string>
+         </property>
+         <property name="text">
+          <string>F</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QPushButton" name="btzf">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 170, 127);
+font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>±</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="3">
+        <widget class="QLineEdit" name="line8">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/new/prefix1/15361217.jpg);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="3">
+        <widget class="QLineEdit" name="line10">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/new/prefix1/15361217.jpg);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="btc">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 170, 0);
+font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>c</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QPushButton" name="btjian">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(170, 170, 127);</string>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="bttg">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 170, 0);
+font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>←</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QPushButton" name="btcheng">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(170, 170, 127);</string>
+         </property>
+         <property name="text">
+          <string>*</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="3">
+        <widget class="QLineEdit" name="line16">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/new/prefix1/15361217.jpg);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QPushButton" name="bt8">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3">
+        <widget class="QPushButton" name="bt9">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QPushButton" name="bt5">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="3">
+        <widget class="QPushButton" name="bt6">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QPushButton" name="bt2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="3">
+        <widget class="QPushButton" name="bt3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <widget class="QPushButton" name="bt0">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 24pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="3">
+        <widget class="QPushButton" name="btresult">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 170, 127);
+font: 24pt &quot;Agency FB&quot;;</string>
+         </property>
+         <property name="text">
+          <string>=</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>切换</string>
+    </property>
+    <addaction name="standard"/>
+    <addaction name="actionProgrammer"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="standard">
+   <property name="text">
+    <string>Standard</string>
+   </property>
+  </action>
+  <action name="actionProgrammer">
+   <property name="text">
+    <string>Programmer</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

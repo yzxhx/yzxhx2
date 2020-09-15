@@ -2,9 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "programmer.h"
-#include "scientific.h"
-#include <QString>
+#include <programmer.h>
+
 namespace Ui {
 class MainWindow;
 }
@@ -16,13 +15,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-public:
-    void progshow();//窗口切换
-    void scinshow();
-    void p_st();
-    void p_s();
-    void s_st();
-    void s_p();
 
     void btn0clicked();
     void btn1clicked();
@@ -34,22 +26,51 @@ public:
     void btn7clicked();
     void btn8clicked();
     void btn9clicked();
+
     void btnjiaclicked();
     void btnjianclicked();
     void btnchengclicked();
     void btnchuclicked();
-    void btnklclicked();
-    void btnkrclicked();
     void btnresultclicked();
+
     void btnzfclicked();
     void btndianclicked();
-    void btnCclicked();
+    void btntgclicked();
+    void btnclclicked();
+    void btnpfclicked();
+    void btnghclicked();
+    void btnbfhclicked();
+    void btntimeclicked();
+
+    void btnzsclicked();
+    void btnklclicked();
+    void btnkrclicked();
+    void btnlnclicked();
+    void btnjiecclicked();
+    void btn10xclicked();
+
+    void btnyyclicked();
+    void btnyeclicked();
+    void btnfbclicked();
+    void btngbsclicked();
+    void btngysclicked();
+    void btnzshsclicked();
+
+    void btnsinclicked();
+    void btncosclicked();
+    void btntanclicked();
+
+    void btnpaiclicked();
+    void btneclicked();
+    void btnlgclicked();
+    void btnmodclicked();
+    void shiftpro();
+    void shiftstand();
+
 
 private:
     Ui::MainWindow *ui;
-    programmer prog;
-    scientific scin;
-
+    programmer w;
     QString input = "0";
 };
 
